@@ -11,6 +11,8 @@ if not creds or creds.invalid:
     creds = tools.run_flow(flow, store)
 GCAL = discovery.build('calendar', 'v3', http=creds.authorize(Http()))
 
+if __name__ == "__main__":
+    main()
 
 GMT_OFF = '-05:00'      # PDT/MST/GMT-7
 EVENT = {
